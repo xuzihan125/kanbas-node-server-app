@@ -7,7 +7,6 @@ import ModuleRoutes from "./modules/routes.js";
 import cors from "cors";
 import mongoose from "mongoose";
 import UserRoutes from "./users/routes.js";
-// mongoose.connect("mongodb://127.0.0.1:27017/Kanbas");
 import session from "express-session";
 import "dotenv/config";
 
