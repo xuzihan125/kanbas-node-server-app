@@ -11,17 +11,12 @@ import session from "express-session";
 import "dotenv/config";
 
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/Kanbas";
-const FRONT_URL = process.env.FRONTEND_URL || "http://localhost:3000";
 mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors({
     credentials: true,
     origin: "https://heroic-flan-a8cd11.netlify.app"
   },
-    // {
-    //     credentials: true,
-    //     origin: "http://localhost:3001"
-    // }
 ));
 const sessionOptions = {
     secret: "any string",
