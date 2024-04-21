@@ -30,6 +30,7 @@ if (process.env.NODE_ENV !== "development") {
       secure: true,
     };
 }
+app.options('*', cors());
 app.use(session(sessionOptions));
 CourseRoutes(app);
 ModuleRoutes(app);
